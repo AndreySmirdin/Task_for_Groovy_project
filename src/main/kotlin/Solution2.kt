@@ -9,8 +9,8 @@ class Solution2 {
             val n = reader.nextInt()
 
             val namingSystem = Solution2()
-            for (i in 0..n) {
-                val name = reader.nextLine()
+            for (i in 1..n) {
+                val name = readLine()!!
                 println(namingSystem.process(name))
             }
         }
@@ -19,7 +19,7 @@ class Solution2 {
     fun process(name: String): String {
         val value = names.getOrDefault(name, 0)
         names.set(name, value + 1)
-        return name + (if (value == 0) "" else value)
+        return if (value == 0) "ok" else name + value
     }
 
     private val names = HashMap<String, Int>()

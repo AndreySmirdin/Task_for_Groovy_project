@@ -7,10 +7,10 @@ class Solution2Test {
     @Test
     fun solveImpossibleBecauseOfPrefixName() {
         val solution = Solution2()
-        assertEquals(solution.process("andrey"), "andrey")
-        assertEquals(solution.process("andrey"), "andrey1")
-        assertEquals(solution.process("andrey"), "andrey2")
-        assertEquals(solution.process("masha"), "masha")
-        assertEquals(solution.process("andrey"), "andrey3")
+        assertEquals("ok", solution.process("andrey"))
+        assertEquals("andrey1", solution.process("andrey"))
+        assertEquals("andrey2", solution.process("andrey"))
+        assertEquals("ok", solution.process("masha"))
+        assertEquals("andrey3", solution.process("andrey"))
     }
 }
